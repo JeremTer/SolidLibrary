@@ -1,6 +1,6 @@
-package com.example.tp.model.status;
+package com.example.tp.domain.model.person.ability;
 
-public interface Status {
+public interface PersonAbilities {
 
     boolean isAbleToAddNewBook();
 

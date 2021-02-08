@@ -1,6 +1,6 @@
-package com.example.tp.model.status;
+package com.example.tp.domain.model.person.ability;
 
-public class StatusGuest implements Status {
+public class GuestAbilities implements PersonAbilities {
 
     @Override
     public boolean isAbleToAddNewBook() {

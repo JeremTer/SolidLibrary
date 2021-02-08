@@ -1,4 +1,4 @@
-package com.example.tp.model;
+package com.example.tp.domain.model;
 
 import java.util.Objects;
 

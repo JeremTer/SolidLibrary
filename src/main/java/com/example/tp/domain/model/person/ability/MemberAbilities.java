@@ -1,10 +1,9 @@
-package com.example.tp.model.status;
+package com.example.tp.domain.model.person.ability;
 
-public class StatusLibrarian implements Status{
-
+public class MemberAbilities implements PersonAbilities {
     @Override
     public boolean isAbleToAddNewBook() {
-        return true;
+        return false;
     }
 
     @Override
@@ -14,11 +13,11 @@ public class StatusLibrarian implements Status{
 
     @Override
     public Integer borrowBookTimeLimitInWeek() {
-        return -1;
+        return 4;
     }
 
     @Override
     public Integer borrowBookNumberLimitAtTheSameTime() {
-        return -1;
+        return 3;
     }
 }

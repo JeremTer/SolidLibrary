@@ -1,4 +1,4 @@
-package com.example.tp.model;
+package com.example.tp.domain.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,5 +32,13 @@ public class LibraryBooks {
             }
         }
         return null;
+    }
+
+    public void removeBook(Book book) {
+        books.remove(book);
+    }
+
+    public void showBook(Book book) {
+        System.out.println(book);
     }
 }
