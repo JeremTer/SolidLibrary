@@ -7,11 +7,17 @@ import com.example.tp.domain.model.person.ability.PersonAbilities;
 public class Person {
 
     private final PersonAbilities personAbilities;
-    private final LibraryBooks borrowedBooks;
+    private LibraryBooks borrowedBooks;
+    private final String name;
 
-    public Person(PersonAbilities personAbilities) {
+    public Person(PersonAbilities personAbilities, String name) {
         this.personAbilities = personAbilities;
+        this.name = name;
         this.borrowedBooks = new LibraryBooks();
+    }
+
+    public String getName() {
+        return name;
     }
 
     public boolean isAbleToAddNewBook() {
@@ -35,16 +41,26 @@ public class Person {
     }
 
     public void borrowBook(Book book) {
-        book.borrow();
         borrowedBooks.addBook(book);
     }
 
     public void renderBook(Book book) {
-        book.render();
         borrowedBooks.removeBook(book);
     }
 
     public Book findBorrowedBook(Book book) {
         return borrowedBooks.findBook(book);
+    }
+
+    public LibraryBooks borrowedBooks() {
+        return borrowedBooks;
+    }
+
+    public void loadBorrowedBooks(LibraryBooks books) {
+        borrowedBooks = books;
+    }
+
+    public void showBorrowedBooks() {
+        borrowedBooks.showAllBooks();
     }
 }

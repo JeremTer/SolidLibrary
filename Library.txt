@@ -1,0 +1,10 @@
+title=Etranger
+author=Camus
+title=Potter
+author=JK
+title=Miserable
+author=Hugo
+title=Germinal
+author=Zola
+title=Le seigneur des anneaux
+author=Tolkien

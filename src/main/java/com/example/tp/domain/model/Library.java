@@ -1,7 +1,7 @@
 package com.example.tp.domain.model;
 
 public class Library {
-    private final LibraryBooks libraryBooks;
+    private LibraryBooks libraryBooks;
 
     public Library(LibraryBooks libraryBooks) {
         this.libraryBooks = libraryBooks;
@@ -23,4 +23,15 @@ public class Library {
         libraryBooks.showBook(book);
     }
 
+    public LibraryBooks getAllBooks() {
+        return libraryBooks;
+    }
+
+    public void loadBooks(LibraryBooks books) {
+        libraryBooks = books;
+    }
+
+    public void removeBook(Book book) {
+        libraryBooks.removeBook(book);
+    }
 }

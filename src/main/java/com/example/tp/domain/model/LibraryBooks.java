@@ -41,4 +41,13 @@ public class LibraryBooks {
     public void showBook(Book book) {
         System.out.println(book);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        for (Book book : books) {
+            str.append(book.toString()).append("\n");
+        }
+        return str.toString();
+    }
 }
